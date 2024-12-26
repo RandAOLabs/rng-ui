@@ -11,10 +11,11 @@
     "@types/node": "^20.10.5",
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
-    "@types/styled-components": "^5.1.34",
-    "ao-process-clients": "^3.4.2",
+    "@types/styled-components": "5.1.34",
+    "ao-process-clients": "^3.5.11",
     "arconnect": "^1.0.4",
     "chart.js": "^4.4.1",
+    "cross-env": "^7.0.3",
     "permaweb-deploy": "^1.1.8",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
@@ -31,8 +32,7 @@
     "@babel/plugin-transform-numeric-separator": "^7.23.4",
     "@babel/plugin-transform-optional-chaining": "^7.23.4",
     "@babel/plugin-transform-private-methods": "^7.23.4",
-    "@babel/plugin-transform-private-property-in-object": "^7.23.4",
-    "cross-env": "^7.0.3"
+    "@babel/plugin-transform-private-property-in-object": "^7.23.4"
   },
   "scripts": {
     "start": "react-scripts start",

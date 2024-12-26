@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react';
 import { TokenClient } from 'ao-process-clients';
+
 import OutlinedButton from '../OutlinedButton';
 import './Mint.css';
 
@@ -13,10 +14,11 @@ const Mint: React.FC<MintProps> = ({
   quantity = "1"
 }) => {
   const handleMint = useCallback(async () => {
+
     try {
       const tokenClient = TokenClient.autoConfiguration();
-      await tokenClient.mint(quantity);
-      console.log('Successfully minted tokens');
+      const success = await tokenClient.grant(quantity);
+      console.log(`Tokens minted: ${success}`);
     } catch (error) {
       console.error('Error minting tokens:', error);
     }
