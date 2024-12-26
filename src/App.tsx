@@ -1,11 +1,10 @@
 import './App.css';
-
-const GAME_ID = 'Test_id';
+import OutlinedButton from './components/OutlinedButton';
 
 function App() {
-
   return (
     <div className="app-container">
+      <OutlinedButton text="CONNECT ETH WALLET" />
     </div>
   );
 }
