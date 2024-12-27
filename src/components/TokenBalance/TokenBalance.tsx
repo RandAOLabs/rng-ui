@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import './TokenBalance.css';
 import { useToken } from '../../context/TokenContext';
+import { DisplayBox } from '../DisplayBox';
 
 export const TokenBalance: React.FC = () => {
   const { balance, refreshBalance } = useToken();
@@ -14,10 +14,5 @@ export const TokenBalance: React.FC = () => {
 
   if (balance <= 0) return null;
 
-  return (
-    <div className="token-balance">
-      <div className="balance-label">$RAO TEST TOKEN</div>
-      <div className="balance-value">{balance}</div>
-    </div>
-  );
+  return <DisplayBox label="$RAO TEST TOKEN" value={balance} />;
 };
