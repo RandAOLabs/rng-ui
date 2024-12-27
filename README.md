@@ -1,3 +1,11 @@
-## Satoshi's Palace Game Development Template
+# RandAO Random Number Generator UI
 
-Welcome to the Satoshi's Palace Game Development Template! This repository provides everything you need to create, customize, and deploy immersive games within the Satoshi's Palace ecosystem.
+A decentralized random number generator user interface powered by RandAO. This application provides a transparent and verifiable way to generate random numbers using RandAO's protocol on the permaweb.
+
+## Features
+
+- Generate verifiable random numbers
+- Permaweb deployment ready
+
+## Development
+For setup and deployment instructions, see our [Development Guide](docs/development.md).
