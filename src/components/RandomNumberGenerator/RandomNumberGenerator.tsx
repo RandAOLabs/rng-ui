@@ -1,7 +1,9 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { RandomClient } from 'ao-process-clients';
+import { FaCircleQuestion } from 'react-icons/fa6';
 import { InputBox } from '../InputBox';
 import { DisplayBox } from '../DisplayBox';
+import { LoadingSpinner } from '../LoadingSpinner';
 import OutlinedButton from '../OutlinedButton';
 import './RandomNumberGenerator.css';
 
@@ -135,15 +137,28 @@ export const RandomNumberGenerator: React.FC = () => {
         />
       </div>
       <div className="button-section">
-        <OutlinedButton
-          text="Generate Random Number"
-          onClick={handleGenerate}
-          disabled={loading}
-        />
+        <div className="button-info-container">
+          <OutlinedButton
+            text="Generate Random Number"
+            onClick={handleGenerate}
+            disabled={loading}
+          />
+          <a 
+            href="https://x.com/RandAOToken/status/1869393055406493799"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="info-icon-link"
+            title="Fast Decentralized Verifiable Random"
+          >
+            <FaCircleQuestion size={24} />
+          </a>
+        </div>
       </div>
       <div className="result-section">
         {loading ? (
-          <div>Loading random...</div>
+          <div className="loading-container">
+            <LoadingSpinner size={32} />
+          </div>
         ) : error ? (
           <div className="error-message">{error}</div>
         ) : (
