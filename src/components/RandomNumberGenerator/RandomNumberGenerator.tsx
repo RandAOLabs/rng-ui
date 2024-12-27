@@ -67,7 +67,7 @@ export const RandomNumberGenerator: React.FC = () => {
         if (success) {
           clearInterval(intervalId);
         }
-      }, 1000);
+      }, 20000);
     }
 
     return () => {
@@ -76,6 +76,15 @@ export const RandomNumberGenerator: React.FC = () => {
       }
     };
   }, [loading, currentCallbackId, pollRandomNumber]);
+
+  const generateUUID = (): string => {
+    const template = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx';
+    return template.replace(/[xy]/g, (c) => {
+      const r = Math.random() * 16 | 0;
+      const v = c === 'x' ? r : (r & 0x3 | 0x8);
+      return v.toString(16);
+    });
+  };
 
   const handleGenerate = async () => {
     const minNum = parseInt(min);
@@ -99,9 +108,10 @@ export const RandomNumberGenerator: React.FC = () => {
     try {
       const randomClient = RandomClient.autoConfiguration();
       const callbackId = `random-${Date.now()}`;
+      // const callbackId = await randomClient.getCallingWalletAddress();
       const success = await randomClient.createRequest(
-        ['XUo8jZtUDBFLtp5okR12oLrqIZ4ewNlTpqnqmriihJE', "XUo8jZtUDBFLtp5okR12oLrqIZ4ewNlTpqnqmriihJE"],
-        1,
+        ['XUo8jZtUDBFLtp5okR12oLrqIZ4ewNlTpqnqmriihJE', 'c8Iq4yunDnsJWGSz_wYwQU--O9qeODKHiRdUkQkW2p8'],
+        undefined,
         callbackId
       );
 
