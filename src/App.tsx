@@ -1,18 +1,39 @@
-import { useState } from 'react';
 import './App.css';
+import { WalletProvider } from './context/WalletContext';
+import { TokenProvider } from './context/TokenContext';
 import ConnectWalletButton from './components/ConnectWalletButton';
 import Mint from './components/Mint';
+import { Topbar } from './components/Topbar';
+import { TokenBalance } from './components/TokenBalance';
+import { useWallet } from './context/WalletContext';
 
-function App() {
-  const [isWalletConnected, setIsWalletConnected] = useState(false);
+const AppContent: React.FC = () => {
+  const { isConnected } = useWallet();
 
   return (
     <div className="app-container">
-      <ConnectWalletButton 
-        onConnect={(connected) => setIsWalletConnected(connected)}
-      />
-      <Mint isWalletConnected={isWalletConnected} />
+      <Topbar />
+      <div className="content-container">
+        {!isConnected ? (
+          <ConnectWalletButton />
+        ) : (
+          <div className="mint-section">
+            <Mint />
+            <TokenBalance />
+          </div>
+        )}
+      </div>
     </div>
+  );
+};
+
+function App() {
+  return (
+    <WalletProvider>
+      <TokenProvider>
+        <AppContent />
+      </TokenProvider>
+    </WalletProvider>
   );
 }
 

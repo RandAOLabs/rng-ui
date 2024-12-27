@@ -1,1 +1,7 @@
 /* Add any Mint-specific styles here */
+
+.mint-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
