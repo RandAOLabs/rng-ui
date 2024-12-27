@@ -29,3 +29,49 @@
   justify-content: center;
   width: 100%;
 }
+
+.error-message {
+  color: #ff4444;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 48px;
+}
+
+.button-info-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.info-icon-link {
+  color: #000;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.info-icon-link:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Add native tooltip styling */
+.info-icon-link:hover::before {
+  content: attr(title);
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  transform: translateY(-30px);
+  pointer-events: none;
+}

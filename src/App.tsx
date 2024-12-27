@@ -6,6 +6,7 @@ import Mint from './components/Mint';
 import { Topbar } from './components/Topbar';
 import { TokenBalance } from './components/TokenBalance';
 import { RandomNumberGenerator } from './components/RandomNumberGenerator';
+import { SocialLinks } from './components/SocialLinks';
 import { useWallet } from './context/WalletContext';
 
 const AppContent: React.FC = () => {
@@ -29,6 +30,7 @@ const AppContent: React.FC = () => {
           </div>
         )}
       </div>
+      <SocialLinks />
     </div>
   );
 };

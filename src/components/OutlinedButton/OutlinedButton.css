@@ -21,3 +21,13 @@
   transform: translate(2px, 2px);
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
 }
+
+.outlined-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.outlined-button.disabled:hover {
+  background-color: transparent;
+  cursor: not-allowed;
+}
