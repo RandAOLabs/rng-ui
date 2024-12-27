@@ -8,7 +8,7 @@ import { useToken } from '../../context/TokenContext';
 const Mint: React.FC = () => {
   const { isConnected } = useWallet();
   const { refreshBalance } = useToken();
-  const quantity = "1";
+  const quantity = "100";
 
   const handleMint = useCallback(async () => {
     try {
