@@ -5,6 +5,7 @@ import ConnectWalletButton from './components/ConnectWalletButton';
 import Mint from './components/Mint';
 import { Topbar } from './components/Topbar';
 import { TokenBalance } from './components/TokenBalance';
+import { RandomNumberGenerator } from './components/RandomNumberGenerator';
 import { useWallet } from './context/WalletContext';
 
 const AppContent: React.FC = () => {
@@ -17,9 +18,14 @@ const AppContent: React.FC = () => {
         {!isConnected ? (
           <ConnectWalletButton />
         ) : (
-          <div className="mint-section">
-            <Mint />
-            <TokenBalance />
+          <div className="connected-content">
+            <div className="mint-section">
+              <Mint />
+              <TokenBalance />
+            </div>
+            <div className="rng-section">
+              <RandomNumberGenerator />
+            </div>
           </div>
         )}
       </div>
