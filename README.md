@@ -8,4 +8,7 @@ A decentralized random number generator user interface powered by RandAO. This a
 - Permaweb deployment ready
 
 ## Development
-For setup and deployment instructions, see our [Development Guide](docs/development.md).
+For setup and development instructions, see our [Development Guide](docs/development.md).
+
+## Deployment
+For deployment configuration and pipeline setup, see our [Pipeline Deployment Guide](docs/pipeline-deployment.md).
