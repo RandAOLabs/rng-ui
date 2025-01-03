@@ -22,4 +22,4 @@
 
 4. (Optional) Add `DEPLOY_NAME`
    - Your ArNS name for deployment
-   - If not set, deployment will proceed without an ArNS name
+   - If not set, deployment will proceed without an Undername
