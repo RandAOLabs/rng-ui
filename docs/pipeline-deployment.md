@@ -21,4 +21,5 @@
    - Your ArNS process ID
 
 4. (Optional) Add `DEPLOY_NAME`
-   - Only if deploying under an ArNS name
+   - Your ArNS name for deployment
+   - If not set, deployment will proceed without an ArNS name
