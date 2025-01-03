@@ -20,6 +20,6 @@
 3. Add `DEPLOY_ANT_PROCESS`
    - Your ArNS process ID
 
-4. (Optional) Add `DEPLOY_NAME`
+4. (Optional) Add `DEPLOY_UNDERNAME`
    - Your ArNS name for deployment
    - If not set, deployment will proceed without an Undername
