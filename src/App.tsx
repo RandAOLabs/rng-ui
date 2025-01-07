@@ -8,12 +8,14 @@ import { TokenBalance } from './components/TokenBalance';
 import { RandomNumberGenerator } from './components/RandomNumberGenerator';
 import { SocialLinks } from './components/SocialLinks';
 import { useWallet } from './context/WalletContext';
+import Announcement from './components/Announcement';
 
 const AppContent: React.FC = () => {
   const { isConnected } = useWallet();
 
   return (
     <div className="app-container">
+      <Announcement message="This application is currently under active development. All tokens are for testing purposes only and hold no monetary value. Some features may be unstable." />
       <Topbar />
       <div className="content-container">
         {!isConnected ? (

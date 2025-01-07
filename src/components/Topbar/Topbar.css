@@ -1,13 +1,13 @@
 .topbar {
   position: absolute;
-  top: 0;
+  top: 40px;
   left: 0;
   right: 0;
   height: 64px;
   display: flex;
   align-items: center;
   padding: 0 24px;
-  z-index: 1000;
+  z-index: 999;
 }
 
 .walletSection {
