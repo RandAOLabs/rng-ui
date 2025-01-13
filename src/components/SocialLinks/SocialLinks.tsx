@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaYoutube } from 'react-icons/fa';
+import { FaGithub, FaYoutube, FaDiscord, FaTelegram } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { SOCIAL_LINKS } from './constants';
 import './SocialLinks.css';
@@ -13,6 +13,10 @@ export const SocialLinks: React.FC = () => {
         return <FaGithub size={24} />;
       case 'FaYoutube':
         return <FaYoutube size={24} />;
+      case 'FaDiscord':
+        return <FaDiscord size={24} />;
+      case 'FaTelegram':
+        return <FaTelegram size={24} />;
       default:
         return null;
     }
