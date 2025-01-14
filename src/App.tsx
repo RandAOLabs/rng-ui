@@ -15,7 +15,7 @@ const AppContent: React.FC = () => {
 
   return (
     <div className="app-container">
-      <Announcement message="This application is currently under active development. All tokens are for testing purposes only and hold no monetary value. Some features may be unstable." />
+      <Announcement message="This application is currently under active development. All tokens are for testing purposes only and hold no monetary value. Some features may be unstable. Some users may experience delays due to high network traffic." />
       <Topbar />
       <div className="content-container">
         {!isConnected ? (
